@@ -1,0 +1,13 @@
+Dear recipient,
+
+User <%= @user.name %> (<%= @user.email %>) has shared a file with you.
+
+Use the following URL to download your file:
+
+    <%= share_link_url(:id => @share_link.link_token) %>
+
+The URL above will expire at <%= l @share_link.link_expires_at, :format => :time_only %> on <%= l @share_link.link_expires_at, :format => :date_only %>.
+
+--
+Boxroom
+http://boxroomapp.com/
